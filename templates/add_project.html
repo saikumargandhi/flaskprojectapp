@@ -1,0 +1,27 @@
+{% extends "bootstrap_base.html" %}
+{% block content %}
+<!-- The Modal -->
+<div class="modal fade" id="Modal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">        
+        <!-- Modal body -->
+        <div class="modal-body text-center">
+            {% if msg != "Record successfully added": %}
+            <h6 class="text-danger">Project Information is not Added into Database, Try Again</h6>
+            {% else: %}
+            <h6 class="text-success">Project Information Added into Database Successfully.</h6>
+            {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+<script>
+    $( document ).ready(function() {
+        $('#Modal').modal('show');
+        setTimeout(function(){
+            window.location.href = "{{ url_for('projects') }}";
+         }, 2000);
+});
+</script>
+
+{% endblock %}

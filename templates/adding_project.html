@@ -1,0 +1,24 @@
+{% extends "bootstrap_base.html" %}
+{% block content %}
+<div class="card">
+    <div class="container p-5">
+        <form action="{{ url_for('add_project') }}" method="post">
+            <div class="form-group">
+                <label for="project_name">My Project Name:</label>
+                <input type="text" class="form-control" name="project_name" id="project_name">
+            </div>
+            <div class="form-group">
+                <label for="project_tools">My Project Tools:</label>
+                <input type="text" class="form-control" name="project_tools" id="project_tools">
+            </div>
+            <div class="form-group">
+                <label for="project_desc">My Project Description:</label>
+                <input type="text" class="form-control" name="project_desc" id="project_desc">
+            </div>
+            <div class="form-group pt-3 mt-3">
+                <button type="submit" class="mr-auto btn btn-info w-100">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

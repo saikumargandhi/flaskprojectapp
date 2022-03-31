@@ -1,0 +1,23 @@
+{% extends "bootstrap_base.html" %}
+{% block content %}
+<div class="table-responsive">
+  <table class="table table-bordered">
+      <thead>
+          <tr class="text-info">
+              <th>My Project Name</th>
+              <th>Tools Used Name</th>
+              <th>Project Description</th>
+          </tr>
+      </thead>
+      <tbody>
+        {% for x in range(rows|length): %}
+          <tr>
+              <td>{{rows[x][0]}}</td>
+              <td>{{rows[x][1]}}</td>
+              <td>{{rows[x][2]}}</td>
+          </tr>
+          {% endfor %}
+      </tbody>
+  </table>
+</div>
+{% endblock %}

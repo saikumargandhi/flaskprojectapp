@@ -1,0 +1,31 @@
+{% extends "bootstrap_base.html" %}
+{% block content %}
+<div class="card">
+  <div class="card-header text-center">
+    <h4>My Skills</h4>
+  </div>
+  <div class="card-body">
+    <div>
+      <div class="table-responsive text-center">
+        <table class="table table-borderless">
+          <thead>
+            <tr>
+              <th>Skill Name</th>
+              <th>Expertise Level</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for x in range(rows|length): %}
+            <tr>
+              <td>{{rows[x][0]}}</td>
+              <td>Proficient</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
